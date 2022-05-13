@@ -1,10 +1,16 @@
-import Vue from 'vue';
-import App from './App.vue';
+import Vue from 'vue'
+import LayoutDefault from './layout/default'
 
-import './assets/css/tailwind.css';
+import './assets/css/tailwind.css'
+import router from './plugins/router'
+import VueRouter from 'vue-router'
+import 'tw-elements'
 
-Vue.config.productionTip = false;
+Vue.use(VueRouter)
+
+Vue.config.productionTip = false
 
 new Vue({
-  render: (h) => h(App),
-}).$mount('#app');
+  router,
+  render: (h) => h(LayoutDefault),
+}).$mount('#app')

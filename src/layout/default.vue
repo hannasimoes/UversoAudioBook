@@ -1,25 +1,23 @@
 <template>
-<section> 
-    <TheHeader/>
-</section>   
+  <section id="app">
+    <!-- <TheHeader /> -->
+    <router-view />
+  </section>
 </template>
 
 <script>
-import TheHeader from '../components/header/theHeader'
+// import TheHeader from '../components/header/theHeader'
 
 export default {
   name: 'LayoutDefault',
-  components: {
-    TheHeader,
-  },
+  // components: {
+  //   TheHeader,
+  // },
 }
 </script>
 <style>
 body {
-  font-family: 'FieldWork-Hum-Regular', Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
-  color: #4d4d4d;
-  background: #fcfcfc;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;

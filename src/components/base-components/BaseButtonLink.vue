@@ -1,12 +1,12 @@
 <template>
-  <button class="button" :class="btnStyle">
+  <router-link class="button" :class="btnStyle" :to="to">
     {{ name }}
-  </button>
+  </router-link>
 </template>
 
 <script>
 export default {
-  name: 'BaseButton',
+  name: 'BaseButtonLink',
 
   props: {
     name: {
@@ -17,9 +17,15 @@ export default {
       type: String,
       default: 'button--black',
     },
+    to: {
+      type: String,
+      required: true,
+      default: '/',
+    },
   },
 }
 </script>
+
 <style scoped>
 @import '../../assets/css/buttons.css';
 </style>

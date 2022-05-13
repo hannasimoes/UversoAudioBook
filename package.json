@@ -5,22 +5,33 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "prettier --check ./src/**/*.{html,js,vue}",
+    "format": "npm run prettier -- --write",
+    "prettier": "prettier ./src/**/*.{html,js,vue}"
   },
   "dependencies": {
-    "core-js": "^3.8.3",
-    "vue": "^2.6.14"
+    "core-js": "^3.22.4",
+    "tw-elements": "^1.0.0-alpha12",
+    "vue": "^2.6.14",
+    "vue-router": "^3.5.3"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.16",
+    "@babel/core": "^7.17.10",
     "@babel/eslint-parser": "^7.12.16",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
-    "autoprefixer": "^10.4.4",
+    "autoprefixer": "^10.4.7",
+    "babel-eslint": "^10.1.0",
     "eslint": "^7.32.0",
-    "eslint-plugin-vue": "^8.0.3",
-    "postcss": "^8.4.12",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-prettier-vue": "^3.1.0",
+    "eslint-plugin-vue": "^8.7.1",
+    "postcss": "^8.4.13",
+    "prettier": "^2.4.1",
+    "prettier-eslint": "^13.0.0",
     "tailwindcss": "^3.0.24",
     "vue-template-compiler": "^2.6.14"
   },
