@@ -2,7 +2,7 @@
   <div class="background-home flex justify-center w-screen h-screen bg-black">
     <div class="justify-center">HANNA CUZONA</div>
     <section class="w-full flex fixed-bottom justify-center bottom-0 bg-black">
-      <BaseButtonLink name="start" to="/introduction" class="mb-8 my-4 w-60" />
+      <BaseButtonLink name="start" to="/login" class="mb-8 my-4 w-60" />
     </section>
   </div>
 </template>

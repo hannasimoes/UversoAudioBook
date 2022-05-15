@@ -67,49 +67,80 @@
         </div>
       </div>
       <!-- main content -->
-      <div class="w-full h-full relative overflow-y-scroll">
+      <div class="w-full h-full relative overflow-y-scroll flex justify-center">
         <!--Cards-->
-        <div class="px-6 py-3">
-          <div class="px-6 py-3 flex items-center justify-between">
-            <h1
-              class="pt-4 pl-2 text-2xl font-bold text-white tracking-wider hover:underline"
-            >
-              Livros Adicionados Recentemente
-            </h1>
-          </div>
-          <div class="w-full flex flex-wrap justify-between p-3">
-            <div
-              v-for="novo in novos"
-              :key="novo.title"
-              class="p-6 w-72 relative"
-            >
+        <div class="flex w-full justify-center">
+          <div class="h-full w-full">
+            <form>
               <div
-                class="absolute w-full h-full flex items-end justify-end p-16 opacity-0 hover:opacity-100"
+                class="flex w-full flex-col items-center bg-black text-center justify-center"
               >
-                <div
-                  class="bg-green-600 rounded-full h-10 w-10 flex items-center"
-                >
-                  <router-link to="/book">
-                    <i class="material-icons p-2 text-white">shopping_bag</i>
-                  </router-link>
+                <div class="w-full justify-center">
+                  <span class="flex justify-center">
+                    <h4 class="text-center text-2xl text-white mb-2 mt-5">
+                      Configurações
+                    </h4>
+                  </span>
+
+                  <p class="mb-4 text-center text-xl mt-4 text-white">Perfil</p>
+                  <p
+                    class="mb-3 text-center text-base text-gray-400 hover:text-white"
+                  >
+                    A Uverso garante a privacidade dos seus dados.
+                  </p>
+                  <span>
+                    <p class="mb-1 text-center text-title text-white">Email</p>
+                  </span>
+                  <span class="flex justify-center items-center">
+                    <BaseInput
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="hanna@hanna.com"
+                      readonly
+                      class="w-1/3 flex justify-center"
+                    />
+                  </span>
+                  <div class="w-100 relative">
+                    <p class="mt-4 text-center text-xl text-white">
+                      Redefinir senha
+                    </p>
+                    <p class="mt-8 text-center text-sm text-white">
+                      Senha atual
+                    </p>
+                    <span class="flex justify-center items-center">
+                      <BaseInput
+                        id="currentPassword"
+                        name="currentPassword"
+                        type="password"
+                        placeholder="Digite sua senha antiga"
+                        autocomplete="off"
+                        class="md:w-96"
+                      />
+                    </span>
+                    <p class="mt-8 text-center text-sm text-white">
+                      Definir uma nova senha
+                    </p>
+                    <span class="flex justify-center items-center">
+                      <BaseInput
+                        id="newPassword"
+                        name="newPassword"
+                        :type="passwordFieldType"
+                        placeholder="Digite sua senha"
+                        autocomplete="off"
+                        class="md:w-96 mb-4"
+                      ></BaseInput>
+                    </span>
+                  </div>
+                  <BaseButtonLink
+                    to="/login"
+                    type="submit"
+                    class="button--stay px-4 mt-4 text-center"
+                    name="Redefinir senha"
+                  />
                 </div>
               </div>
-
-              <div class="bg-gray-600 w-full h-auto p-5 rounded-lg shadow">
-                <img
-                  :src="require(`../../assets/images/${novo.src}`)"
-                  class="h-auto w-full shadow mb-2"
-                />
-
-                <h1 class="text-sm font-semibold text-white tracking-wide">
-                  {{ novo.title }}
-                </h1>
-
-                <h2 class="text-xs text-white tracking-wide">
-                  {{ novo.writer }}
-                </h2>
-              </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>
@@ -121,9 +152,7 @@
     >
       <div class="flex items-center w-1/4">
         <div>
-          <h1 class="text-sm text-white tracking-wide">
-            Anna Karienina - AudioBook
-          </h1>
+          <h1 class="text-sm text-white tracking-wide">Anna Kariênina</h1>
           <h2 class="text-xs text-gray-200 tracking-wide">Liev Tolstói</h2>
         </div>
         <i class="material-icons text-base text-white mx-4">favorite</i>
@@ -179,8 +208,15 @@
   </div>
 </template>
 <script>
+import BaseInput from '../../components/base-components/BaseInput.vue'
+import BaseButtonLink from '@/components/base-components/BaseButtonLink.vue'
+
 export default {
-  name: 'IntroductionPage',
+  name: 'ConfigPage',
+  components: {
+    BaseInput,
+    BaseButtonLink,
+  },
 
   data: function () {
     return {
@@ -211,38 +247,6 @@ export default {
           name: 'ana-karenina',
           file: new Audio(require('../../assets/audio/ana-karenina.mp3')),
           isPlaying: false,
-        },
-      ],
-      novos: [
-        {
-          src: 'anna-karenina.jpg',
-          title: 'ANNA KARIENINA ',
-          writer: 'Liev Tolstói',
-        },
-        {
-          src: 'aprenda-ingles.jpg',
-          title: 'INGLÊS EM 30 DIAS ',
-          writer: 'Martins Fontes',
-        },
-        {
-          src: 'aprender-gramatica.jpg',
-          title: 'APRENDER E PRÁTICAR GRAMÁTICA',
-          writer: 'Mauro Ferreira',
-        },
-        {
-          src: 'a-rebeliao.jpg',
-          title: 'A REBELIÃO DA PONTUAÇÃO',
-          writer: 'William Tucci',
-        },
-        {
-          src: 'camera-na-mao.jpg',
-          title: 'CÂMERA NA MÃO, O GUARANI NO CORAÇÃO',
-          writer: 'Moacyr Scliar',
-        },
-        {
-          src: 'contabilidade-de-custos.jpg',
-          title: 'CONTABILIDADE DE CUSTOS',
-          writer: 'Eliseu Martins',
         },
       ],
     }

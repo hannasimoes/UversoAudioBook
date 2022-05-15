@@ -36,7 +36,7 @@
             <p class="text-sm text-white font-semibold ml-4">Carrinho</p>
           </router-link>
           <router-link
-            to="/"
+            to="/config"
             class="flex items-center justify-start opacity-75 hover:opacity-100"
           >
             <span class="material-icons text-white">settings</span>

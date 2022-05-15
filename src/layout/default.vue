@@ -5,19 +5,14 @@
       rel="stylesheet"
     />
 
-    <!-- <TheHeader /> -->
     <router-view />
   </section>
 </template>
 
 <script>
-// import TheHeader from '../components/header/theHeader'
-
 export default {
   name: 'LayoutDefault',
-  components: {
-    // TheHeader,
-  },
+  components: {},
 }
 </script>
 <style>

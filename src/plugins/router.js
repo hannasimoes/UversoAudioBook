@@ -9,6 +9,7 @@ import LoginPage from '../pages/login/index.vue'
 import PaymentPage from '../pages/payment/index.vue'
 import SucessPage from '../pages/sucess/index.vue'
 import TestePage from '../pages/teste/index.vue'
+import ConfigPage from '../pages/config/index.vue'
 
 const routes = [
   { path: '/', component: homePage },
@@ -19,6 +20,7 @@ const routes = [
   { path: '/payment', component: PaymentPage },
   { path: '/sucess', component: SucessPage },
   { path: '/teste', component: TestePage },
+  { path: '/config', component: ConfigPage },
 ]
 
 const router = new VueRouter({
