@@ -1,5 +1,10 @@
 <template>
   <section id="app">
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
     <!-- <TheHeader /> -->
     <router-view />
   </section>
@@ -10,9 +15,9 @@
 
 export default {
   name: 'LayoutDefault',
-  // components: {
-  //   TheHeader,
-  // },
+  components: {
+    // TheHeader,
+  },
 }
 </script>
 <style>

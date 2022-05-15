@@ -7,7 +7,7 @@
       <img
         class="base-loading__image"
         alt="Carregando..."
-        :src="require(`../../assets/images/card-loading.svg`)"
+        :src="require(`../../assets/images/anna-karenina.jpg`)"
       />
     </div>
   </div>
