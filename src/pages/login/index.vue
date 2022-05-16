@@ -6,6 +6,7 @@
         <div class="p-3 px-6 flex justify-center">
           <img
             src="../../assets/icons/logo-certo.svg"
+            alt="logo uverso"
             class="h-24"
             style="filter: brightness(0) invert(1)"
           />
@@ -63,7 +64,11 @@
               <i class="material-icons text-white">keyboard_arrow_down</i>
             </div>
           </div>
-          <img src="../../assets/images/anna-karenina.jpg" class="w-56 h-40" />
+          <img
+            src="../../assets/images/anna-karenina.jpg"
+            alt="Capa Anna Kariênina"
+            class="w-56 h-40"
+          />
         </div>
       </div>
       <!-- main content -->
@@ -186,11 +191,11 @@ export default {
   data: function () {
     return {
       pages: [
-        { id: 'home', to: '/teste', name: 'Home', icon: 'home' },
-        { id: 'search', to: '/teste', name: 'Procurar', icon: 'search' },
+        { id: 'home', to: '/introduction', name: 'Home', icon: 'home' },
+        { id: 'search', to: '/search', name: 'Procurar', icon: 'search' },
         {
           id: 'library',
-          to: '/teste',
+          to: '/library',
           name: 'Biblioteca',
           icon: 'library_books',
         },
@@ -214,38 +219,7 @@ export default {
           isPlaying: false,
         },
       ],
-      novos: [
-        {
-          src: 'anna-karenina.jpg',
-          title: 'ANNA KARIENINA ',
-          writer: 'Liev Tolstói',
-        },
-        {
-          src: 'aprenda-ingles.jpg',
-          title: 'INGLÊS EM 30 DIAS ',
-          writer: 'Martins Fontes',
-        },
-        {
-          src: 'aprender-gramatica.jpg',
-          title: 'APRENDER E PRÁTICAR GRAMÁTICA',
-          writer: 'Mauro Ferreira',
-        },
-        {
-          src: 'a-rebeliao.jpg',
-          title: 'A REBELIÃO DA PONTUAÇÃO',
-          writer: 'William Tucci',
-        },
-        {
-          src: 'camera-na-mao.jpg',
-          title: 'CÂMERA NA MÃO, O GUARANI NO CORAÇÃO',
-          writer: 'Moacyr Scliar',
-        },
-        {
-          src: 'contabilidade-de-custos.jpg',
-          title: 'CONTABILIDADE DE CUSTOS',
-          writer: 'Eliseu Martins',
-        },
-      ],
+
       credentials: {
         email: '',
         password: '',

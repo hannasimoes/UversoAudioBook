@@ -6,6 +6,7 @@
         <div class="p-3 px-6 flex justify-center">
           <img
             src="../../assets/icons/logo-certo.svg"
+            alt="logo uverso"
             class="h-24"
             style="filter: brightness(0) invert(1)"
           />
@@ -63,7 +64,11 @@
               <i class="material-icons text-white">keyboard_arrow_down</i>
             </div>
           </div>
-          <img src="../../assets/images/anna-karenina.jpg" class="w-56 h-40" />
+          <img
+            src="../../assets/images/anna-karenina.jpg"
+            alt="capa livro anna kariênina"
+            class="w-56 h-40"
+          />
         </div>
       </div>
       <!-- main content -->
@@ -166,11 +171,11 @@ export default {
   data: function () {
     return {
       pages: [
-        { id: 'home', to: '/teste', name: 'Home', icon: 'home' },
-        { id: 'search', to: '/teste', name: 'Procurar', icon: 'search' },
+        { id: 'home', to: '/introduction', name: 'Home', icon: 'home' },
+        { id: 'search', to: '/search', name: 'Procurar', icon: 'search' },
         {
           id: 'library',
-          to: '/teste',
+          to: '/library',
           name: 'Biblioteca',
           icon: 'library_books',
         },

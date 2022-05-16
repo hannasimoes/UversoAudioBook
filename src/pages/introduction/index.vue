@@ -6,6 +6,7 @@
         <div class="p-3 px-6 flex justify-center">
           <img
             src="../../assets/icons/logo-certo.svg"
+            alt="logo uverso"
             class="h-24"
             style="filter: brightness(0) invert(1)"
           />
@@ -63,7 +64,11 @@
               <i class="material-icons text-white">keyboard_arrow_down</i>
             </div>
           </div>
-          <img src="../../assets/images/anna-karenina.jpg" class="w-56 h-40" />
+          <img
+            src="../../assets/images/anna-karenina.jpg"
+            alt="capa livro anna kariênina"
+            class="w-56 h-40"
+          />
         </div>
       </div>
       <!-- main content -->
@@ -74,7 +79,7 @@
             <h1
               class="pt-4 pl-2 text-2xl font-bold text-white tracking-wider hover:underline"
             >
-              Livros Adicionados Recentemente
+              Livros Mais Vendidos
             </h1>
           </div>
           <div class="w-full flex flex-wrap justify-between p-3">
@@ -98,6 +103,7 @@
               <div class="bg-gray-600 w-full h-auto p-5 rounded-lg shadow">
                 <img
                   :src="require(`../../assets/images/${novo.src}`)"
+                  :alt="alt"
                   class="h-auto w-full shadow mb-2"
                 />
 
@@ -185,11 +191,11 @@ export default {
   data: function () {
     return {
       pages: [
-        { id: 'home', to: '/teste', name: 'Home', icon: 'home' },
-        { id: 'search', to: '/teste', name: 'Procurar', icon: 'search' },
+        { id: 'home', to: '/introduction', name: 'Home', icon: 'home' },
+        { id: 'search', to: '/search', name: 'Procurar', icon: 'search' },
         {
           id: 'library',
-          to: '/teste',
+          to: '/library',
           name: 'Biblioteca',
           icon: 'library_books',
         },
@@ -216,31 +222,37 @@ export default {
       novos: [
         {
           src: 'anna-karenina.jpg',
-          title: 'ANNA KARIENINA ',
+          alt: 'Anna Kariênina',
+          title: 'ANNA KARIÊNINA ',
           writer: 'Liev Tolstói',
         },
         {
           src: 'aprenda-ingles.jpg',
+          alt: 'INGLÊS EM 30 DIAS',
           title: 'INGLÊS EM 30 DIAS ',
           writer: 'Martins Fontes',
         },
         {
           src: 'aprender-gramatica.jpg',
+          alt: 'APRENDER E PRÁTICAR GRAMÁTICA',
           title: 'APRENDER E PRÁTICAR GRAMÁTICA',
           writer: 'Mauro Ferreira',
         },
         {
           src: 'a-rebeliao.jpg',
+          alt: 'A REBELIÃO DA PONTUAÇÃO',
           title: 'A REBELIÃO DA PONTUAÇÃO',
           writer: 'William Tucci',
         },
         {
           src: 'camera-na-mao.jpg',
+          alt: 'CÂMERA NA MÃO, O GUARANI NO CORAÇÃO',
           title: 'CÂMERA NA MÃO, O GUARANI NO CORAÇÃO',
           writer: 'Moacyr Scliar',
         },
         {
           src: 'contabilidade-de-custos.jpg',
+          alt: 'CONTABILIDADE DE CUSTOS',
           title: 'CONTABILIDADE DE CUSTOS',
           writer: 'Eliseu Martins',
         },
